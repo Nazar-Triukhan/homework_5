@@ -63,7 +63,43 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+transition: 100ms background-color ;
 
+
+}
+
+.ke{
+   width: 62px;
+    height: 60px;
+border-radius: 6px;
+border: 2px solid #000;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.06) 100%), #191A1F;
+box-shadow: 0 3px 1px 0 rgba(255, 255, 255, 0.15) inset;
+border: none;
+
+color: #FFF;
+text-align: center;
+  font-family: "Roboto", sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.key:hover,
+.key.hovered {
+  background-color: green;
+  transform: translateY(3px);
+}
+
+.key:hover,
+.key.hovernot {
+  background-color: red;
+  transform: translateY(3px);
 }
 
 .key--delete{
@@ -173,4 +209,40 @@ width: 79px;
 
 .key--arrow-left , .key--arrow-up , .key--arrow-down , .key--arrow-right{
     height: 31px;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: darkolivegreen;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.btn:hover{
+       background-color: rgb(99, 135, 37); 
+}
+
+.span , #key{
+       width: 200px;
+    height: 60px;
+border-radius: 6px;
+border: 2px solid #000;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.06) 100%), #191A1F;
+box-shadow: 0 3px 1px 0 rgba(255, 255, 255, 0.15) inset;
+border: none;
+
+color: #FFF;
+text-align: center;
+  font-family: "Roboto", sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+
+display: flex;
+justify-content: center;
+align-items: center;
 }

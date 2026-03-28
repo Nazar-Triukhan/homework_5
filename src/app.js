@@ -1,92 +1,30 @@
-const keys = [
-  "`",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "0",
-  "-",
-  "=",
-  "Backspace",
-  "Tab",
-  "q",
-  "w",
-  "e",
-  "r",
-  "t",
-  "y",
-  "u",
-  "i",
-  "o",
-  "p",
-  "[",
-  "]",
-  "\\",
-  "CapsLock",
-  "a",
-  "s",
-  "d",
-  "f",
-  "g",
-  "h",
-  "j",
-  "k",
-  "l",
-  ";",
-  "'",
-  "Enter",
-  "Shift",
-  "z",
-  "x",
-  "c",
-  "v",
-  "b",
-  "n",
-  "m",
-  ",",
-  ".",
-  "/",
-  "Shift",
-  "Control",
-  "Alt",
-  "Meta",
-  " ",
-  "Meta",
-  "Alt",
-  "ArrowLeft",
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowRight",
-];
+import btnIf from './js/btnIf'
+import keyApp from './js/keyApp'
+import keys from './js/keys'
+import pnotify from './js/pnotify'
+
+pnotify.info({
+    text: 'Гра клавіатури',
+    delay: 1500,
+})
+
+
+
 
 const keyClick = document.querySelector("#key");
-let currentKeyIndex = 0;
-keyClick.textContent = keys[currentKeyIndex];
+const keyRef = document.querySelectorAll(".key");
 const numberRef = document.querySelector(".span");
 numberRef.textContent = 0;
-
-function keyApp() {
-  window.addEventListener("keydown", (e) => {
-      if (e.key.toLocaleLowerCase() === keys[currentKeyIndex].toLocaleLowerCase()) {
-        currentKeyIndex++;
-        numberRef.textContent++;
-
-        if (keys.length !== currentKeyIndex) {
-          keyClick.textContent = keys[currentKeyIndex];
-        } else return;
-      } else {
-        console.log("name true key");
-      }
-  });
-} 
+const btnRef = document.querySelector(".btn");
+const state = {
+  currentKeyIndex: 0
+};
+keyClick.textContent = keys[state.currentKeyIndex];
 
 
+btnIf({btn: btnRef,state,numberRef,keyClick,keys});
+keyApp({keyClick,keyRef,numberRef,state,keys});
+
+// 2 завдання
 
 
-
-keyApp()

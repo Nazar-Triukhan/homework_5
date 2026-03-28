@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/Nazar-Triukhan/homework_5#readme",
   "devDependencies": {
+    "@pnotify/core": "^5.2.0",
+    "@pnotify/desktop": "^5.2.0",
+    "@pnotify/mobile": "^5.2.0",
     "parcel": "^2.16.4"
   },
   "dependencies": {
